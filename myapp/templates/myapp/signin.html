@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>signin</title>
-</head>
-<body>
-signin
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_table }}
-    <button type="submit">signin</button>
-</form>
-</body>
-</html>
+{% extends 'myapp/base.html' %}
+
+{% block contents %}
+    <form method="post" class="signin-form">
+        {% csrf_token %}
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+            <button type="submit">signin</button>
+    </form>
+{% endblock %}

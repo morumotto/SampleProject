@@ -1,23 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-</head>
-<body>
-    <p>index page</p>
-    <p>login_user:{{request.user}}</p>
-    <a href="{% url 'myapp:signout' %}">signout</a>
-    <form method="post">
+{% extends 'myapp/base.html' %}
+
+{% block contents %}
+    <div class="username">
+        {{ request.user }}
+    </div>
+
+    <form method="post" class="todoform">
         {% csrf_token %}
-        <table>
+        <table class="table">
             {{ form.as_table }}
         </table>
-        <button type="submit">登録</button>
+        <button type="submit" class="btn btn-primary">登録</button>
     </form>
-    {% for item in todo %}
-        <p>{{ item.title }} : {{ item.created_at |date:"Y/m/d f"}}</p>
-        <a href="{% url 'myapp:delete' item.pk %}">完了</a>
-    {% endfor %}
-</body>
-</html>
+
+    <div class="todo-container">
+        {% for item in todo %}
+            <div class="todo-content">
+                <div class="todo-title">
+                    {{ item.title }} : {{ item.created_at |date:"Y/m/d f"}}
+                </div>
+                <div class="todo-detail">
+                    {{ item.contents }}
+                </div>
+                <a href="{% url 'myapp:delete' item.pk %}" class="btn btn-primary btn-sm todo-btn">完了</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
