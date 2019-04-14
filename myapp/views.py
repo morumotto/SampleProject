@@ -27,3 +27,7 @@ class SigninView(LoginView):
     form_class = LoginForm
     template_name = 'myapp/signin.html'
 signinView = SigninView.as_view()
+
+class SignoutView(LogoutView):
+    pass
+signoutView = SignoutView.as_view()

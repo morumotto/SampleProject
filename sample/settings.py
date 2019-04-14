@@ -122,4 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'myapp:index'
+LOGOUT_REDIRECT_URL = 'myapp:top'
 AUTH_USER_MODEL = 'myapp.CustomUser'
