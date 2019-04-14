@@ -1,0 +1,54 @@
+/*** top ***/
+.board {
+    margin: 40px auto;
+    padding: 40px 40px;
+    width: 400px;
+}
+
+.board .btn {
+    margin: 20px 10px;
+    padding: 10px 10px;
+}
+
+/*** index ***/
+.username {
+    width: 40%;
+    margin: 20px auto;
+    font-size: 30px;
+}
+
+.todoform {
+    width: 40%;
+    margin: 40px auto;
+}
+
+.todo-container {
+    width: 70%;
+    margin: 40px auto;
+}
+
+.todo-content {
+    border-top: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    margin: 20px auto;
+}
+.todo-title {
+    margin: 0px 0px;
+}
+
+.todo-detail {
+    margin: 10px 10px;
+}
+
+.todo-btn {
+    display: block;
+    margin: 10px 10px 10px auto;
+    width: 58px;
+}
+
+/*** signin ***/
+.signin-form {
+    width: 40%;
+    margin: 40px auto;
+}
+
