@@ -10,11 +10,13 @@
     <a href="{% url 'myapp:signout' %}">signout</a>
     <form method="post">
         {% csrf_token %}
-        {{ form.contents }}
+        <table>
+            {{ form.as_table }}
+        </table>
         <button type="submit">登録</button>
     </form>
     {% for item in todo %}
-        <p>{{ item }}</p>
+        <p>{{ item.title }} : {{ item.created_at |date:"Y/m/d f"}}</p>
         <a href="{% url 'myapp:delete' item.pk %}">完了</a>
     {% endfor %}
 </body>

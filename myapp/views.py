@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from .models import CustomUser, Todo
 from .forms import CustomUserForm, LoginForm, CreateTodoForm
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -11,6 +12,7 @@ def topView(request):
     return render(request, "myapp/top.html")
 
 
+@login_required
 def indexView(request):
     params = {
         'form': CreateTodoForm(),
@@ -18,7 +20,10 @@ def indexView(request):
     }
 
     if request.method == "POST":
-        todo = Todo(owner=request.user, contents=request.POST['contents'])
+        todo = Todo(owner=request.user,
+                    title=request.POST['title'],
+                    contents=request.POST['contents'],
+        )
         todo.save()
         return redirect('myapp:index')
 
@@ -41,9 +46,10 @@ signinView = SigninView.as_view()
 
 class SignoutView(LogoutView):
     pass
-signoutView = SignoutView.as_view()
+signoutView = login_required(SignoutView.as_view())
 
 
+@login_required
 def deleteView(request, num):
     Todo.objects.filter(pk=num).delete()
     return redirect('myapp:index')

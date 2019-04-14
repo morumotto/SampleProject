@@ -86,7 +86,9 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 class Todo(models.Model):
     owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100, default="No Title")
     contents = models.CharField(max_length=1000)
+    created_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.contents
