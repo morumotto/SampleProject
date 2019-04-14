@@ -5,8 +5,13 @@
     <title>top</title>
 </head>
 <body>
-top
-<a href="{% url 'myapp:signin' %}">signin</a>
-<a href="{% url 'myapp:signup' %}">signup</a>
+    <p>top</p>
+    <p>login_user : {{ request.user}}</p>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'myapp:index' %}">signin</a>
+    {% else %}
+        <a href="{% url 'myapp:signin' %}">signin</a>
+    {% endif %}
+    <a href="{% url 'myapp:signup' %}">signup</a>
 </body>
 </html>

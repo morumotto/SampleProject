@@ -5,6 +5,8 @@
     <title>index</title>
 </head>
 <body>
-index page
+    <p>index page</p>
+    <p>login_user:{{request.user}}</p>
+    <a href="{% url 'myapp:signout' %}">signout</a>
 </body>
 </html>
