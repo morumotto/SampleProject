@@ -17,4 +17,5 @@ class LoginForm(AuthenticationForm):
         super().__init__(*args, **kwargs)
 
 class CreateTodoForm(forms.Form):
-    contents = forms.CharField(max_length=1000)
+    title = forms.CharField(max_length=100, label='タイトル')
+    contents = forms.CharField(max_length=1000, label='詳細', required=False)
