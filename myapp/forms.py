@@ -15,3 +15,6 @@ class CustomUserForm(UserCreationForm):
 class LoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+class CreateTodoForm(forms.Form):
+    contents = forms.CharField(max_length=1000)
