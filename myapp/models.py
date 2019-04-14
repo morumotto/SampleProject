@@ -83,3 +83,10 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         """
         send_mail(subject, message, from_email, [self.email], **kwargs)
 
+
+class Todo(models.Model):
+    owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    contents = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.contents

@@ -8,5 +8,14 @@
     <p>index page</p>
     <p>login_user:{{request.user}}</p>
     <a href="{% url 'myapp:signout' %}">signout</a>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.contents }}
+        <button type="submit">登録</button>
+    </form>
+    {% for item in todo %}
+        <p>{{ item }}</p>
+        <a href="{% url 'myapp:delete' item.pk %}">完了</a>
+    {% endfor %}
 </body>
 </html>
