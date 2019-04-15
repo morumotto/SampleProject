@@ -18,7 +18,7 @@ pytz==2019.1
 sqlparse==0.3.0
 ```
 
-## Usage
+## Usage　
 
 インストール後にmigrationファイルを作成してください。
 
@@ -43,6 +43,15 @@ http://localhost:8000/myapp/
 
 
 ## Install
+
+クローン用のディレクトリを作成し移動します。
 ```
-git clone
+$ mkdir 'ディレクトリ名' 
+$ cd 'ディレクトリ名'
+```
+
+移動した先でプロジェクトをクローンしてください。
+
+```
+$ git clone https://github.com/morumotto/SampleProject.git
 ```
