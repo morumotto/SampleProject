@@ -5,7 +5,7 @@ Todo
 
 ## Desscription
 
-シンプルなTooリスト管理アプリです。
+シンプルなTodoリスト管理アプリです。
 Djangoでのユーザーモデルの作成と認証の確認のために作成しました。
 
 ## Requirement
