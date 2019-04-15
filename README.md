@@ -40,7 +40,7 @@ $ git clone https://github.com/morumotto/SampleProject.git
 $ cd SampleProject
 ```
 
-移動後、プロジェクト下にあるreuirements.txtを使い、ライブラリをインストールします。
+移動後、プロジェクト下にあるrequirements.txtを使い、ライブラリをインストールします。
 
 ```
 $ pip install -r requirements.txt
