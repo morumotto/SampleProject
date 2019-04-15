@@ -1,8 +1,12 @@
 {% extends 'myapp/base.html' %}
 
+{% block title %}マイページ{% endblock %}
+
+{% block page-title %}{{request.user}}{% endblock %}
+
 {% block contents %}
     <div class="username">
-        {{ request.user }}
+        ToDo作成
     </div>
 
     <form method="post" class="todoform">
@@ -10,8 +14,10 @@
         <table class="table">
             {{ form.as_table }}
         </table>
-        <button type="submit" class="btn btn-primary">登録</button>
+        <button type="submit" class="btn btn-primary">作成</button>
     </form>
+
+    <div class="list-title">ToDo_Lists</div>
 
     <div class="todo-container">
         {% for item in todo %}
@@ -22,7 +28,7 @@
                 <div class="todo-detail">
                     {{ item.contents }}
                 </div>
-                <a href="{% url 'myapp:delete' item.pk %}" class="btn btn-primary btn-sm todo-btn">完了</a>
+                <a href="{% url 'myapp:delete' item.pk %}" class="btn btn-danger btn-sm todo-btn">完了</a>
             </div>
         {% endfor %}
     </div>

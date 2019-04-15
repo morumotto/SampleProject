@@ -5,7 +5,6 @@ from .models import CustomUser, Todo
 from .forms import CustomUserForm, LoginForm, CreateTodoForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
-# Create your views here.
 
 
 def topView(request):
@@ -34,8 +33,12 @@ class SignupView(CreateView):
     model = CustomUser
     form_class = CustomUserForm
     template_name = 'myapp/signup.html'
-    success_url = reverse_lazy('myapp:index')
+    success_url = reverse_lazy('myapp:signup_comp')
 signupView = SignupView.as_view()
+
+
+def signupCompView(request):
+    return render(request, 'myapp/signup_comp.html')
 
 
 class SigninView(LoginView):

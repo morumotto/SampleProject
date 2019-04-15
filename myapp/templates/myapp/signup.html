@@ -1,11 +1,15 @@
 {% extends 'myapp/base.html' %}
+
+{% block title %}サインアップ{% endblock %}
+
+{% block page-title %}サインアップ{% endblock %}
+
 {% block contents %}
-signup
-<form method="post">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <button type="submit">signup</button>
-</form>
+    <form method="post" class="signup-form">
+        {% csrf_token %}
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+        <button type="submit" class="btn btn-primary signup-btn">サインアップ</button>
+    </form>
 {% endblock %}

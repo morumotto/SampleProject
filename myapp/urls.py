@@ -9,5 +9,6 @@ urlpatterns = [
     path('signin/', views.signinView, name='signin'),
     path('signout/', views.signoutView, name='signout'),
     path('delete/<int:num>', views.deleteView, name='delete'),
+    path('signup_comp', views.signupCompView, name='signup_comp'),
     path('', views.topView, name='top'),
 ]
