@@ -48,7 +48,6 @@ $ pip install -r requirements.txt
 migrationファイルを作成します。
 
 ```
-$ cd SampleProject
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
