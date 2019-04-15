@@ -3,11 +3,15 @@ Todo
 
 シンプルなTodoリスト管理アプリです。
 
+## Desscription
+
+シンプルなTooリスト管理アプリです。
+Djangoでのユーザーモデルの作成と認証の確認のために作成しました。
+
 ## Requirement
 - Python3.x
 - Python3.5.2で動作確認
-
-ライブラリ
+- ライブラリ
 ```
 Django==2.2
 pytz==2019.1
@@ -32,20 +36,13 @@ $ python manage.py runserver
 ブラウザで
 
 ```
-localhost:8000/myapp/
+http://localhost:8000/myapp/
 ```
 
 にアクセスしてください。
 
 
 ## Install
-
-## Contribution
-
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
-
-## Author
-
-[tcnksm](https://github.com/tcnksm)
+```
+git clone
+```
