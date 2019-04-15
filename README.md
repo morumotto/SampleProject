@@ -34,7 +34,18 @@ $ git clone https://github.com/morumotto/SampleProject.git
 
 ## Usage　
 
-インストール後にプロジェクトに移動しmigrationファイルを作成してください。
+インストール後にプロジェクトに移動します。
+
+```
+$ cd SampleProject
+```
+
+移動後、プロジェクト下にあるreuirements.txtを使い、ライブラリをインストールします。
+
+```
+$ pip install -r requirements.txt
+```
+migrationファイルを作成します。
 
 ```
 $ cd SampleProject
