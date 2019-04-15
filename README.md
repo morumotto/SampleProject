@@ -18,12 +18,27 @@ pytz==2019.1
 sqlparse==0.3.0
 ```
 
-## Usage　
+## Install
 
-インストール後にmigrationファイルを作成してください。
+クローン用のディレクトリを作成し移動します。
+```
+$ mkdir 'ディレクトリ名' 
+$ cd 'ディレクトリ名'
+```
+
+移動した先でプロジェクトをクローンしてください。
 
 ```
-$ python manage.py makemigration
+$ git clone https://github.com/morumotto/SampleProject.git
+```
+
+## Usage　
+
+インストール後にプロジェクトに移動しmigrationファイルを作成してください。
+
+```
+$ cd SampleProject
+$ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
@@ -39,19 +54,4 @@ $ python manage.py runserver
 http://localhost:8000/myapp/
 ```
 
-にアクセスしてください。
-
-
-## Install
-
-クローン用のディレクトリを作成し移動します。
-```
-$ mkdir 'ディレクトリ名' 
-$ cd 'ディレクトリ名'
-```
-
-移動した先でプロジェクトをクローンしてください。
-
-```
-$ git clone https://github.com/morumotto/SampleProject.git
-```
+にアクセスしてください。トップページが表示されます。
