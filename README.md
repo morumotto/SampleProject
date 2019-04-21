@@ -52,7 +52,7 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-mirateが済んだらサーバーを起動します。
+migrateが済んだらサーバーを起動します。
 
 ```
 $ python manage.py runserver
